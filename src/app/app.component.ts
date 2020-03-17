@@ -14,6 +14,9 @@ export class AppComponent {
   salario = 8699.25;
   fecha = new Date();
   idioma = 'es-GT';
+  videoURL = 'https://www.youtube.com/embed/pKO9UjSeLew';
+  contrasenia = 'topsecret';
+  activarContrasenia = true;
 
   valorPromesa = new Promise<string>((resolve) => {
     setTimeout(() => {
