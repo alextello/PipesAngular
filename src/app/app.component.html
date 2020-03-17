@@ -25,6 +25,12 @@
                 </tr>
 
                 <tr>
+                    <td>{{nombre2}}</td>
+                    <td>capitalizado (personalizado)</td>
+                    <td>{{nombre2 | capitalizado:true }}</td>
+                </tr>
+
+                <tr>
                     <td>{{nombre}}</td>
                     <td>slice:3</td>
                     <td>{{ nombre | slice:3 }}</td>
@@ -118,6 +124,23 @@
                     <td>{{fecha}}</td>
                     <td>date:'MMMM - dd'</td>
                     <td>{{ fecha | date:'MMMM - dd'}}</td>
+                </tr>
+
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'MMMM - dd':'':'en'</td>
+                    <td>{{ fecha | date:'MMMM - dd':'':'en'}}</td>
+                </tr>
+
+                <tr>
+                    <td>{{fecha}}</td>
+                    <td>date:'MMMM - dd':'':'en'
+                        <br>
+                        <button (click)="idioma='es-GT'" class="btn btn-outline-primary mr-2">Español</button>
+                        <button (click)="idioma='en'" class="btn btn-outline-secondary mr-2">Inglés</button>
+                        <button (click)="idioma='fr'" class="btn btn-outline-dark mr-2">Francés</button>
+                    </td>
+                    <td>{{ fecha | date:'MMMM - dd':'':idioma}}</td>
                 </tr>
             </tbody>
         </table>
